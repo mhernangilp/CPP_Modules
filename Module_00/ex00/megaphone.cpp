@@ -6,10 +6,9 @@ int	main(int argc, char **argv)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else {
 		for (int i = 1; i < argc; i++) {
-			for (int j = 0; argv[i][j]; j++) {
-				std::cout << argv[i][j];
-			}
-			if (i != argc - 1)
+			for (int j = 0; argv[i][j]; j++)
+				std::cout << (char)toupper(argv[i][j]);
+			if (i != argc - 1 && argv[i][0] != '\0')
 				std::cout << " ";
 		}
 	}
