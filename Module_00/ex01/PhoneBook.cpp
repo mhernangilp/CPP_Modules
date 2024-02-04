@@ -95,7 +95,7 @@ void PhoneBook::searchContact() {
     std::cout << "Enter index: ";
     std::cin >> index;
     if (index > 0 && index < 9 && list[index - 1].getName() != "") {
-        std::cout << BLUE <<"CONTACT INFO:" << std::endl;
+        std::cout << PURPLE << "CONTACT INFO:" << std::endl;
         std::cout << "First name: " << list[index - 1].getName() << std::endl;
         std::cout << "Last name: " << list[index - 1].getLastName() << std::endl;
         std::cout << "Nickname: " << list[index - 1].getNickname() << std::endl;
