@@ -8,7 +8,10 @@ int main()
     std::cout << YELLOW << "--Available commands: ADD, SEARCH, EXIT--" << RESET << std::endl;
     while (1) {
         std::cout << "Enter command: ";
-        std::cin >> command;
+        if (!(std::cin >> command)) {
+            std::cout << std::endl << RED << "Exiting..." << RESET <<std::endl;
+            break;
+        }
 
         if (command == "ADD")
             phoneBook.addContact();

@@ -12,15 +12,20 @@ void PhoneBook::addContact() {
     std::string darkestSecret;
 
     std::cout << "Enter name: ";
-    std::cin >> name;
+    if (!(std::cin >> name))
+        return;
     std::cout << "Enter last name: ";
-    std::cin >> lastName;
+    if (!(std::cin >> lastName))
+        return;
     std::cout << "Enter nickname: ";
-    std::cin >> nickname;
+    if (!(std::cin >> nickname))
+        return;
     std::cout << "Enter phone number: ";
-    std::cin >> phoneNumber;
+    if (!(std::cin >> phoneNumber))
+        return;
     std::cout << "Enter darkest secret: ";
-    std::getline(std::cin >> std::ws, darkestSecret);
+    if (!(std::getline(std::cin >> std::ws, darkestSecret)))
+        return;
 
     if (list[7].getName() == "") {
         for(int i = 0; i < 8; i++) {
@@ -93,7 +98,8 @@ void PhoneBook::searchContact() {
         }
     }
     std::cout << "Enter index: ";
-    std::cin >> index;
+    if (!(std::cin >> index))
+        return;
     if (index > 0 && index < 9 && list[index - 1].getName() != "") {
         std::cout << PURPLE << "CONTACT INFO:" << std::endl;
         std::cout << "First name: " << list[index - 1].getName() << std::endl;
