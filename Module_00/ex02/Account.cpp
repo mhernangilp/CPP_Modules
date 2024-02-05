@@ -32,6 +32,7 @@ Account::Account( void )
 
 Account::~Account( void )
 {
+    _nbAccounts--;
     _displayTimestamp();
     std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
 }
