@@ -3,6 +3,7 @@
 Zombie::Zombie ( std::string name )
 {
     this->name = name;
+    std::cout << name << ": Im alive 😃" << std::endl;
 }
 
 Zombie::~Zombie ( void )
