@@ -97,8 +97,9 @@ void PhoneBook::searchContact() {
             std::cout << "|----------|----------|----------|----------|" << std::endl;
         }
     }
+    std::cout << YELLOW << "--Select contact index or -1 to return to de menu--" << RESET << std::endl;
     std::cout << "Enter index: ";
-    if (!(std::cin >> index))
+    if (!(std::cin >> index) || index == -1)
         return;
     if (index > 0 && index < 9 && list[index - 1].getName() != "") {
         std::cout << PURPLE << "CONTACT INFO:" << std::endl;
