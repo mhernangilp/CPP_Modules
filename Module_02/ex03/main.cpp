@@ -1,17 +1,28 @@
-#include "Point.hpp"
+#include "bsp.hpp"
 #include <iostream>
 
+/*            B(10,30)
+                / \
+               /   \
+              /     \
+             /   d   \      e
+            /         \
+     A(0,0) ----------- C(20,0) */
+
 int main( void ) {
-    Point a;
-    Point b(1.5f, 5.2f);
-    Point c(b);
-    Point d;
-    d = b;
+    Point a(0, 0);
+    Point b(20, 0);
+    Point c(10, 30);
+    Point d(10, 15);
+    Point e(30, 15);
 
-    std::cout << a.getX() << ", " << a.getY() << std::endl;
-    std::cout << b.getX() << ", " << b.getY() << std::endl;
-    std::cout << c.getX() << ", " << c.getY() << std::endl;
-    std::cout << d.getX() << ", " << d.getY() << std::endl;
-
+    if (bsp(a, b, c, d))
+        std::cout << "Inside triangle" << std::endl;
+    else
+        std::cout << "Not inside triangle" << std::endl;
+    if (bsp(a, b, c, e))
+        std::cout << "Inside triangle" << std::endl;
+    else
+        std::cout << "Not inside triangle" << std::endl;
     return (0);
 }

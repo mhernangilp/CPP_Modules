@@ -20,7 +20,7 @@ RED = \033[1;31m
 #      FILES        #
 #####################
 
-SRCS = main.cpp Fixed.cpp Point.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 #####################
 #	RULES       #
