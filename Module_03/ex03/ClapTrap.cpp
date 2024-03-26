@@ -1,5 +1,7 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(void) {};
+
 ClapTrap::ClapTrap(std::string name): _name(name)
 {
     std::cout << "[" << _name << "]" << " I am alive :)" << std::endl;

@@ -1,11 +1,13 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap(void){};
+
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
     std::cout << "[" << _name << "] (ScavTrap) I am alive :)" << std::endl;
-    _hitPoints = 100;
-    _energyPoints = 50;
-    _attackDamage = 20;
+    _hitPoints = defaultHitPoints;
+    _energyPoints = defaultEnergyPoints;
+    _attackDamage = defaultAttackDamage;
 }
 
 ScavTrap::~ScavTrap(void) {std::cout << "[" << _name << "] (ScavTrap) I am dead :(" << std::endl;}

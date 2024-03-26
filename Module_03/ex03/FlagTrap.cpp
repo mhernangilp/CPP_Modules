@@ -1,11 +1,13 @@
 #include "FlagTrap.hpp"
 
+FlagTrap::FlagTrap(void) : ClapTrap(){};
+
 FlagTrap::FlagTrap(std::string name): ClapTrap(name)
 {
     std::cout << "[" << _name << "] (FlagTrap) I am alive :)" << std::endl;
-    _hitPoints = 100;
-    _energyPoints = 100 ;
-    _attackDamage = 30;
+    _hitPoints = defaultHitPoints;
+    _energyPoints = defaultEnergyPoints;
+    _attackDamage = defaultAttackDamage;
 }
 
 FlagTrap::~FlagTrap(void) {std::cout << "[" << _name << "] (FlagTrap) I am dead :(" << std::endl;}

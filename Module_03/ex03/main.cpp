@@ -1,25 +1,52 @@
-#include "ClapTrap.hpp"
-#include "FlagTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
+
+using std::cout;
+using std::endl;
 
 int main(void)
 {
-    FlagTrap a("Jose");
-    ScavTrap b("Alberto");
+    DiamondTrap Bozo("Bozo");
+    DiamondTrap Rato("Rato");
+    DiamondTrap	Clone;
 
-    a.takeDamage(5);
-    a.beRepaired(1);
-    a.attack("Juan");
-    a.beRepaired(3);
-    a.takeDamage(15);
-    a.highFivesGuys();
+    cout << endl;
 
-    b.takeDamage(5);
-    b.beRepaired(1);
-    b.attack("Juan");
-    b.beRepaired(3);
-    b.takeDamage(15);
-    b.guardGate();
+    Rato.attack("Bozo");
+    Bozo.takeDamage(30);
 
-    return (0);
+    cout << endl;
+
+    Rato.attack("Bozo");
+    Bozo.takeDamage(30);
+
+    cout << endl;
+
+    Rato.attack("Bozo");
+    Bozo.takeDamage(30);
+
+    cout << endl;
+
+    Clone = Bozo;
+
+    cout << endl;
+
+    Rato.attack("Bozo Clone");
+    Clone.takeDamage(30);
+
+    cout << endl;
+
+    Rato.guardGate();
+
+    cout << endl;
+
+    Clone.beRepaired(100);
+    Clone.highFivesGuys();
+
+    cout << endl;
+
+    Rato.whoAmI();
+
+    cout << endl;
+
+    return 0;
 }
