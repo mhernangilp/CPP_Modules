@@ -2,9 +2,9 @@
 #define DIAMONDTRAP_HPP
 
 #include "ScavTrap.hpp"
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 
-class DiamondTrap : public FlagTrap, public ScavTrap{
+class DiamondTrap : public FragTrap, public ScavTrap{
     private:
         std::string _name;
     

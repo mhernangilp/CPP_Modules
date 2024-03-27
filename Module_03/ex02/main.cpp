@@ -1,9 +1,9 @@
 #include "ClapTrap.hpp"
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-    FlagTrap a("Jose");
+    FragTrap a("Jose");
 
     a.takeDamage(5);
     a.beRepaired(1);

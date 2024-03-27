@@ -20,7 +20,7 @@ RED = \033[1;31m
 #      FILES        #
 #####################
 
-SRCS = main.cpp ClapTrap.cpp FlagTrap.cpp ScavTrap.cpp DiamondTrap.cpp
+SRCS = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
 
 #####################
 #	RULES       #

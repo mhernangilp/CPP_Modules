@@ -1,13 +1,13 @@
-#ifndef FLAGTRAP_HPP
-#define FLAGTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
 
-class FlagTrap : virtual public ClapTrap {
+class FragTrap : virtual public ClapTrap {
     public:
-        FlagTrap(void);
-        FlagTrap(std::string name);
-        ~FlagTrap(void);
+        FragTrap(void);
+        FragTrap(std::string name);
+        ~FragTrap(void);
 
         void    attack(const std::string& target);
         void    highFivesGuys(void);

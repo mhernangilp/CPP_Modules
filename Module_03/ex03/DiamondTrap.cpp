@@ -1,17 +1,17 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : FlagTrap(), ScavTrap() {};
+DiamondTrap::DiamondTrap(void) : FragTrap(), ScavTrap() {};
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), FlagTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
     _name = name;
-    _hitPoints = FlagTrap::defaultHitPoints;
+    _hitPoints = FragTrap::defaultHitPoints;
     _energyPoints = ScavTrap::defaultEnergyPoints;
-    _attackDamage = FlagTrap::defaultAttackDamage;
+    _attackDamage = FragTrap::defaultAttackDamage;
     std::cout << "[" << _name << "] (DiamondTrap) I am alive :)" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &original): ClapTrap(original), FlagTrap(original), ScavTrap(original)
+DiamondTrap::DiamondTrap(const DiamondTrap &original): ClapTrap(original), FragTrap(original), ScavTrap(original)
 {
     _name = original._name;
     ClapTrap::_name = (_name + "_clap_name");

@@ -2,7 +2,7 @@
 #      SETUP        #
 #####################
 
-NAME = flagtrap
+NAME = fragtrap
 CC = c++
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -20,7 +20,7 @@ RED = \033[1;31m
 #      FILES        #
 #####################
 
-SRCS = main.cpp ClapTrap.cpp FlagTrap.cpp
+SRCS = main.cpp ClapTrap.cpp FragTrap.cpp
 
 #####################
 #	RULES       #

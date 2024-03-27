@@ -1,52 +1,35 @@
 #include "DiamondTrap.hpp"
 
-using std::cout;
-using std::endl;
-
 int main(void)
 {
     DiamondTrap Bozo("Bozo");
     DiamondTrap Rato("Rato");
-    DiamondTrap	Clone;
 
-    cout << endl;
-
-    Rato.attack("Bozo");
-    Bozo.takeDamage(30);
-
-    cout << endl;
+    std::cout << std::endl;
 
     Rato.attack("Bozo");
     Bozo.takeDamage(30);
 
-    cout << endl;
+    std::cout << std::endl;
 
     Rato.attack("Bozo");
     Bozo.takeDamage(30);
 
-    cout << endl;
+    std::cout << std::endl;
 
-    Clone = Bozo;
+    Rato.attack("Bozo");
+    Bozo.takeDamage(30);
 
-    cout << endl;
-
-    Rato.attack("Bozo Clone");
-    Clone.takeDamage(30);
-
-    cout << endl;
+    std::cout << std::endl;
 
     Rato.guardGate();
+    Rato.highFivesGuys();
 
-    cout << endl;
-
-    Clone.beRepaired(100);
-    Clone.highFivesGuys();
-
-    cout << endl;
+    std::cout << std::endl;
 
     Rato.whoAmI();
 
-    cout << endl;
+    std::cout << std::endl;
 
     return 0;
 }
