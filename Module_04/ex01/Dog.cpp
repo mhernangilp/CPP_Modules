@@ -7,14 +7,14 @@ Dog::Dog() {
 }
 
 Dog::Dog(const Dog& original) : Animal(original) {
-    brain = new Brain(original.getBrain());
+    brain = new Brain(*original.brain);
 }
 
 Dog& Dog::operator=(const Dog& original) {
     if (this != &original) {
         Animal::operator=(original);
         delete this->brain;
-        this->brain = new Brain(original.getBrain());
+        this->brain = new Brain(*original.brain);
     }
     return *this;
 }

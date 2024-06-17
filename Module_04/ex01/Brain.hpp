@@ -12,8 +12,6 @@ class Brain {
 		Brain(const Brain& original);
 		Brain& operator=(const Brain& original);
 		~Brain();
-
-		const std::string(&getIdeas() const)[100];
 };
 
 #endif

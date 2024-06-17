@@ -23,10 +23,7 @@ int main(void) {
 
 	std::cout << &cat1->getBrain() << std::endl;
 	std::cout << &cat2->getBrain() << std::endl;
-	
-	std::cout << &cat1->getBrain().getIdeas()[50] << std::endl;
-	std::cout << &cat2->getBrain().getIdeas()[50] << std::endl;
-	
+
 	delete cat1;
 	delete cat2;
 

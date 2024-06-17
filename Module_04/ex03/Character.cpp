@@ -6,7 +6,7 @@ Character::Character(const std::string name) : name(name) {
     }
 }
 
-Character::Character(const Character& original) : name(original.getName()) {
+Character::Character(const Character& original) : name(original.name) {
     for (int i = 0; i < 4; i++) {
         if (original.inventory[i] != NULL) {
             inventory[i] = original.inventory[i]->clone();
@@ -17,7 +17,7 @@ Character::Character(const Character& original) : name(original.getName()) {
 
 Character& Character::operator=(const Character& original) {
     if (this != &original){
-        name = original.getName();
+        name = original.name;
 
         for (int i = 0; i < 4; i++) {
             if (inventory[i] != NULL)
