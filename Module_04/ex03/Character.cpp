@@ -52,16 +52,16 @@ void Character::equip(AMateria* m) {
 }
 
 void Character::unequip(int idx) {
-    if (inventory[idx] != NULL) {
-        delete inventory[idx];
+    if (idx >= 0 && idx <= 3)
         inventory[idx] = NULL;
-    }
 }
 
 void Character::use(int idx, ICharacter& target) {
-    if (inventory[idx] != NULL) {
-        inventory[idx]->use(target);
-    } else {
-        std::cout << "- Not a valid materia -" << std::endl;
+    if (idx >= 0 && idx <= 3) {
+        if (inventory[idx] != NULL) {
+            inventory[idx]->use(target);
+        } else {
+            std::cout << "- Not a valid materia -" << std::endl;
+        }
     }
 }
