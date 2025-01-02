@@ -3,29 +3,29 @@
 int main(void) {
     std::cout << PURPLE << "---Alberto---" << RESET << std::endl;
     try {
-        Bureaucrat Alberto("Alberto", 0);
+        Bureaucrat alberto("Alberto", 0);
     } catch (std::exception &e) {
         std::cerr << RED << "Error. " << e.what() << RESET << std::endl;
     }
 
     std::cout << PURPLE << "\n---Juan---" << RESET << std::endl;
-    Bureaucrat Juan("Juan", 2);
-    std::cout << Juan << std::endl;
-    Juan.incrementGrade();
-    std::cout << Juan << std::endl;
+    Bureaucrat juan("Juan", 2);
+    std::cout << juan << std::endl;
+    juan.incrementGrade();
+    std::cout << juan << std::endl;
     try {
-        Juan.incrementGrade();
+        juan.incrementGrade();
     } catch (std::exception &e) {
         std::cerr << RED << "Error. " << e.what() << RESET << std::endl;
     }
 
     std::cout << PURPLE << "\n---Elena---" << RESET << std::endl;
-    Bureaucrat Elena("Elena", 149);
-    std::cout << Elena << std::endl;
-    Elena.decrementGrade();
-    std::cout << Elena << std::endl;
+    Bureaucrat elena("Elena", 149);
+    std::cout << elena << std::endl;
+    elena.decrementGrade();
+    std::cout << elena << std::endl;
     try {
-        Elena.decrementGrade();
+        elena.decrementGrade();
     } catch (std::exception &e) {
         std::cerr << RED << "Error. " << e.what() << RESET << std::endl;
     }
