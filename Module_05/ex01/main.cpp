@@ -14,13 +14,13 @@ int main(void) {
     Bureaucrat juan("Juan", 31);
     std::cout << juan << std::endl;
     try {
-        incrementTaxes.beSigned(juan);
+        juan.signForm(incrementTaxes);
     } catch (std::exception &e) {
         std::cerr << RED << "Error. " << e.what() << RESET << std::endl;
     }
     juan.incrementGrade();
     std::cout << juan << std::endl;
-    incrementTaxes.beSigned(juan);
+    juan.signForm(incrementTaxes);
     std::cout << incrementTaxes << std::endl;
 
     return 0;

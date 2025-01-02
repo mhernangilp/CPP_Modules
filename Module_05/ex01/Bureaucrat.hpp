@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "Form.hpp"
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -10,6 +11,8 @@
 #define YELLOW  "\033[33m"
 #define PURPLE  "\033[35m"
 #define ORANGE  "\033[38;5;214m"
+
+class Form;
 
 class Bureaucrat {
     private:
@@ -29,7 +32,7 @@ class Bureaucrat {
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
-        void signForm(bool success, std::string formName, std::string reason) const;
+        void signForm(Form &form) const;
 
         class GradeTooHighException : public std::exception {
             public:

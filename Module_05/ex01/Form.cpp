@@ -31,17 +31,12 @@ int Form::getSignGrade() const { return _signGrade; }
 int Form::getExecGrade() const { return _execGrade; }
 
 void Form::beSigned(const Bureaucrat &bureaucrat) {
-    if (_signed) {
-        bureaucrat.signForm(false, _name, "form was already signed");
-        return;
-    }
-    if (bureaucrat.getGrade() <= _signGrade) {
+    if (_signed)
+        std::cout << ORANGE << "Warning. Trying to sign a previously signed form" << RESET << std::endl;
+    if (bureaucrat.getGrade() <= _signGrade)
         _signed = true;
-        bureaucrat.signForm(true, _name, "");
-    } else {
-        bureaucrat.signForm(false, _name, "grade too low");
+    else
         throw GradeTooLowException();
-    }
 }
 
 const char *Form::GradeTooHighException::what() const throw() {
