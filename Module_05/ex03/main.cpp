@@ -18,6 +18,8 @@ int main(void) {
     juan.signForm(*form);
     juan.executeForm(*form);
 
+    delete form;
+
     std::cout << PURPLE << "\n---Failure---" << RESET << std::endl;
     Intern newIntern;
     AForm *newForm;
