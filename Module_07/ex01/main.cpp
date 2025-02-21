@@ -6,11 +6,22 @@ void printElement(T const &element) {
     std::cout << element << " ";
 }
 
+void increment(int &n) {
+    n++;
+}
+
 int main() {
     int arr[] = {1, 2, 3, 4, 5};
     size_t len = sizeof(arr) / sizeof(arr[0]);
 
-    std::cout << "Array: " << std::endl;
+    std::cout << "Original Array: ";
+    ::iter(arr, len, printElement<int>);
+    std::cout << std::endl;
+
+    std::cout << "Incrementing Elements..." << std::endl;
+    ::iter(arr, len, increment);
+
+    std::cout << "Modified Array: ";
     ::iter(arr, len, printElement<int>);
     std::cout << std::endl;
 
