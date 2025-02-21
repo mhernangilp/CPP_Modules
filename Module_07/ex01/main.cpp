@@ -2,26 +2,15 @@
 #include <iostream>
 
 template <typename T>
-void printElement(T &element) {
+void printElement(T const &element) {
     std::cout << element << " ";
-}
-
-void increment(int &n) {
-    n++;
 }
 
 int main() {
     int arr[] = {1, 2, 3, 4, 5};
     size_t len = sizeof(arr) / sizeof(arr[0]);
 
-    std::cout << "Original Array: ";
-    ::iter(arr, len, printElement<int>);
-    std::cout << std::endl;
-
-    std::cout << "Incrementing Elements..." << std::endl;
-    ::iter(arr, len, increment);
-
-    std::cout << "Modified Array: ";
+    std::cout << "Array: " << std::endl;
     ::iter(arr, len, printElement<int>);
     std::cout << std::endl;
 
