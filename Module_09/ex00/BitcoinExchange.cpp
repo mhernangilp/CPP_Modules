@@ -169,10 +169,3 @@ void BitcoinExchange::findDateAndCalculate() {
 
 	std::cout << LineData.date << " => " << LineData.value << " = " << LineData.value * it->second << std::endl;
 }
-
-
-void BitcoinExchange::printMap() {
-	for (std::map<std::string, float>::const_iterator it = btcData.begin(); it != btcData.end(); ++it) {
-		std::cout << it->first << " => " << it->second << std::endl;
-	}
-}
