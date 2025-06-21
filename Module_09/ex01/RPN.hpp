@@ -23,6 +23,9 @@ class RPN {
         RPN(const RPN& original);
         RPN& operator=(const RPN& original);
         ~RPN();
+
+        double getResult() const;
+        const std::stack<double> &getStack() const;
 };
 
 #endif

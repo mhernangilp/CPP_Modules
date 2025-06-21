@@ -31,6 +31,9 @@ class BitcoinExchange {
         BitcoinExchange(const BitcoinExchange &original);
         BitcoinExchange& operator=(const BitcoinExchange &original);
         ~BitcoinExchange();
+
+        const std::map<std::string, float> &getBtcData() const;
+        const DataLine &getLineData() const;
         
         void handleInputFile(std::string &fileName);
 };

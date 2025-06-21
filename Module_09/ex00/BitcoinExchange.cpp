@@ -32,6 +32,15 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange &original) {
 
 BitcoinExchange::~BitcoinExchange() {}
 
+const std::map<std::string, float> &BitcoinExchange::getBtcData() const {
+	return btcData;
+}
+
+const DataLine &BitcoinExchange::getLineData() const {
+	return LineData;
+}
+
+
 void BitcoinExchange::fillData(std::string &string) {
 	std::stringstream ss(string);
 	std::string token;

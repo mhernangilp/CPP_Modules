@@ -36,6 +36,14 @@ RPN& RPN::operator=(const RPN& original) {
 
 RPN::~RPN() {}
 
+double RPN::getResult() const {
+    return result;
+}
+
+const std::stack<double> &RPN::getStack() const {
+    return stack;
+}
+
 bool RPN::isOperator(char c) const {
     return c == '+' || c == '-' || c == '*' || c == '/';
 }
